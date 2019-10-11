@@ -1,1 +1,31 @@
 // Mixins Here
+
+.navsettings{
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto; 
+    height: 10rem; 
+}
+
+.navphonesettings{
+    max-width: 500px;
+    width: 100%;
+}
+
+.buttonsize{
+    border-radius: .8rem;
+    font-size: 1.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button(@width, @height){
+    width: @width;
+    height: @height;
+}
+
+.buttoncolor(@txtcolor, @bg-color){
+    color: @txtcolor;
+    background-color: @bg-color;
+}
