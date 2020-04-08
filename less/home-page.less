@@ -1,8 +1,18 @@
 // Home Content
 
 .home {
-
+  
   .intro {
+
+    .headerimg{
+      img{
+        border-radius: 0.6rem;
+
+        @media @phone{
+          max-width: 500px;
+        }//end of img media phone
+      }//end of img for header
+    }//end of header img container
 
     h2 {
       padding: 15px;
@@ -19,13 +29,32 @@
     flex-wrap: wrap;
     width: 100%;
 
+    .blast{
+      @media @phone{
+        width: 100%;
+      }//end of blast media phone
+    }//end of blast img
+
+    .sky{
+      @media @phone{
+      display: none;
+      }//end of sky img media phone
+    }//end of sky img
+
+    .launch{
+      @media @phone{
+        display: none;
+      }//end of launch img media phone
+    }//end of launch img
+
     img {
       width: 28%;
       margin: 20px 2.5%;
       border-radius: 20px;
       height: 100%;
-    }
-  }
+    }//end of img in space images
+
+  }//end of space images
 
   .visit-planets {
     padding: 15px;
@@ -46,8 +75,37 @@
     display: flex;
     justify-content: center;
 
+    @media @phone{
+      flex-direction: column-reverse;
+      justify-content: center;
+      padding: 3%;
+      width: 100%;
+      margin-top: 30px;
+    }//end of walk container media phone
+
+    .walk-img {
+      width: 46%;
+      margin-left: 4%;
+
+      @media @phone{
+        width: 100%;
+        margin-left: 0%;
+      }//end of walk-img media phone
+      
+      img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+      }//end of img
+    }//end of walk-img
+
     .walk-text {
       width: 50%;
+
+      @media @phone{
+        width:100%;
+        margin-top: 4%;
+      }//end of walk-text media phone
 
       h3 {
         margin-bottom: 10px;
@@ -58,18 +116,21 @@
       }
 
       .btn {
-      }
-    }
+        border: 1px solid black;
+        .buttoncolor(white, black);
+        .buttonsize();
+        .button(30%, 3rem);
+        
+        &:hover{
+          .buttoncolor(black, white);
+        }//end of hover
 
-    .walk-img {
-      width: 46%;
-      margin-left: 4%;
-      
-      img {
-        width: 100%;
-        height: auto;
-        border-radius: 10px;
-      }
-    }
-  }
-}// home
+        @media @phone{
+          .button(100%, 5rem);
+      }//end of button
+
+    }//end of walk-text
+
+  }//end of walk container
+}
+}
